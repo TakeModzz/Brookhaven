@@ -1,0 +1,98 @@
+-- Library
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Mapple7777/UI-Librarys/main/UI-1/UI.lua"))()
+
+-- Create Window
+local Window = Library:Create("Brookhaven","Take Modzz")
+
+-- Tab
+local Tab1 = Window:Tab("Scripts",true)
+local Tab2 = Window:Tab("Teleports",true)
+
+-- Label
+Tab1:Label("Player")
+Tab2:Label("Teleports (some bugs")
+
+-- Button
+
+Tab1:Button("Speed ×1",function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 5
+end)
+
+Tab1:Button("Speed ×5",function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+end)
+
+Tab1:Button("Speed ×10",function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+end)
+
+Tab1:Button("Speed ×100",function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 1000
+end)
+
+Tab1:Button("Speed ×1000",function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 10000
+end)
+
+Tab1:Button("infinite jump",function()
+local InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+end)
+
+Tab1:Button("Ban-House enter(Like noclip)",function()
+game.Players.LocalPlayer.Character.Humanoid.MaxHealth = math.huge
+game.Players.LocalPlayer.Character.Humanoid.Health = math.huge
+while true do
+	game:GetService("RunService").Stepped:wait()
+	game.Players.LocalPlayer.Character.Head.CanCollide = false
+	game.Players.LocalPlayer.Character.Torso.CanCollide = false
+end
+end)
+
+Tab2:Button("Spawn",function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-29.5561142, 3.10000014, -5.59368896, 0.998213708, 3.44971385e-10, 0.059744671, 5.9457117e-10, 1, -1.57081868e-08, -0.059744671, 1.5715651e-08, 0.998213708)
+end)
+
+Tab2:Button("Bank",function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8.10119247, 17.3999977, 256.180603, -0.999838352, -1.06563199e-07, -0.0179783385, -1.07368507e-07, 1, 4.38276544e-08, 0.0179783385, 4.57508804e-08, -0.999838352)
+end)
+
+Tab2:Button("Hospital",function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-308.247101, 3.18624806, 24.3476028, -0.986845434, 4.08104164e-08, 0.161666438, 3.54120111e-08, 1, -3.62736614e-08, -0.161666438, -3.00715648e-08, -0.986845434)
+end)
+
+Tab2:Button("Hospital (2nd Floor)",function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-302.068359, 16.2863007, 58.9497414, -0.999962151, 3.40361375e-08, 0.00869886018, 3.49856073e-08, 1, 1.08996609e-07, -0.00869886018, 1.09296813e-07, -0.999962151)
+end)
+
+Tab2:Button("Police station",function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-251.13501, 20.6758175, 57.0825195, -0.110507093, -2.91658271e-08, -0.993875325, 7.8353668e-10, 1, -2.94326803e-08, 0.993875325, -4.03125755e-09, -0.110507093)
+end)
+
+Tab2:Button("School",function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-298.76355, 3.29999948, 202.069611, 0.279190123, -1.62006e-08, -0.960235834, 2.95626688e-08, 1, -8.27608648e-09, 0.960235834, -2.60765329e-08, 0.279190123)
+end)
+
+Tab2:Button("Town hall",function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-321.219635, 3.29999948, 212.691513, 0.0252194423, 1.67049823e-08, 0.99968195, -7.19294988e-08, 1, -1.4895698e-08, -0.99968195, -7.15309625e-08, 0.0252194423)
+end)
+
+Tab2:Button("Fire station",function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-355.089935, 7.0999918, -113.36039, 0.999280214, 1.66549263e-08, -0.0379348882, -1.67783014e-08, 1, -2.93394442e-09, 0.0379348882, 3.56831564e-09, 0.999280214)
+end)
+
+Tab2:Button("Hotels",function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-29.5561142, 3.10000014, -5.59368896, 0.998213708, 2.1475306e-09, 0.059744671, 3.69713615e-09, 1, -9.77168781e-08, -0.059744671, 9.77632126e-08, 0.998213708)
+end)
+
+Tab2:Button("Cafe",function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(212.979553, 3.09999537, 159.025787, -0.595215619, -7.15464878e-08, -0.803566039, -1.73345978e-08, 1, -7.61961871e-08, 0.803566039, -3.14236637e-08, -0.595215619)
+end)
+
+Tab2:Button("Farm",function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(777.475403, 6.21883488, -165.325027, -0.517032504, -0.00310860178, 0.855960131, -0.000296234793, 0.99999398, 0.00345275458, -0.855965734, 0.00153162109, -0.517030299)
+end)
